@@ -1,0 +1,19 @@
+{
+  "name": "@datagetter.cn/area-dragger",
+  "version": "1.1.0",
+  "description": "基于Vue的区域拖拽组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizhiqianduan/vue-area-dragger.git"
+  },
+  "author": "xiaohei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizhiqianduan/vue-area-dragger/issues"
+  },
+  "homepage": "https://github.com/lizhiqianduan/vue-area-dragger#readme"
+}
