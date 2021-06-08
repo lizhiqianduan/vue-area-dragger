@@ -5,8 +5,6 @@
 ```
 npm i @datagetter.cn/area-dragger
 ```
-## 开源地址
-https://github.com/lizhiqianduan/vue-area-dragger
 
 ## 参数/方法
 | 参数/方法 | 描述 |
@@ -49,3 +47,18 @@ export default {
 }
 </script>
 ```
+
+## 二次开发步骤
+- 1.开源地址下载代码
+https://github.com/lizhiqianduan/vue-area-dragger
+
+- 2.进入项目执行命令
+```
+npm install && npm run test
+```
+
+- 3.修改相关代码，即可实时预览效果
+
+
+## 最后
+如果觉得有用，右上角请留下你的star，这样能让更多的人知道，不胜感激！

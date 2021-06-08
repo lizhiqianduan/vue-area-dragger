@@ -4,7 +4,7 @@
   "description": "基于Vue的区域拖拽组件",
   "main": "index.js",
   "scripts": {
-    "test": "vue serve test/Test.vue"
+    "test": "vue serve test/Test.vue -o"
   },
   "repository": {
     "type": "git",
