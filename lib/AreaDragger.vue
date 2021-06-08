@@ -9,6 +9,8 @@
 			}"
 			id="background"
 		>
+      <slot name="content"></slot>
+
 			<div
 				class="calculator"
 				@mousedown.self="mousedown"
@@ -183,22 +185,25 @@ export default {
 
     /**
      * 获取图片尺寸
+     * 若不存在，则直接返回容器的高宽
      */
     async getImageSize(url) {
+      console.log(url,111);
+      // 判断存在
+      if(!url) return {width:self.wrapWidth,height:self.wrapHeight};
+
       let self = this;
       var img = new Image();
       img.src = url;
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         img.onerror = function () {
-          resolve(false);
+          resolve({width:self.wrapWidth,height:self.wrapHeight});
           return false;
         };
         img.onload = function () {
           console.log(img.width + " " + img.height);
-          self.imageSize.width = img.width;
-          self.imageSize.height = img.height;
           img.onload = null; //避免重复加载
-          resolve({width:self.imageSize.width,height:self.imageSize.height});
+          resolve({width:img.width,height:img.height});
         };
       });
     },
@@ -206,7 +211,7 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
+<style scoped>
 .cropper-root {
 	width: 100%;
 	height: 100%;
@@ -250,9 +255,8 @@ export default {
 	border-radius: 5px;
 	color: white;
 	cursor: pointer;
-
-	&:active {
-		background-color: rgb(55, 144, 255);
-	}
+}
+.buttons button:active {
+  background-color: rgb(55, 144, 255);
 }
 </style>
